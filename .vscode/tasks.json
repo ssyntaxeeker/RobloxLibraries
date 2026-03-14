@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Rojo Sourcemap Watch",
+      "type": "shell",
+      "command": "rojo sourcemap default.project.json --output sourcemap.json --include-non-scripts --watch",
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+ ]
+}

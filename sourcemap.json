@@ -1,0 +1,1 @@
+{"name":"Libraries","className":"DataModel","filePaths":["default.project.json"],"children":[{"name":"ReplicatedStorage","className":"ReplicatedStorage","children":[{"name":"Vendor","className":"Folder","children":[{"name":"DecayMeter","className":"ModuleScript","filePaths":["src/Vendor/DecayMeter.luau"]}]}]}]}
