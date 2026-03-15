@@ -3,7 +3,7 @@
 --[[
 	DecayMeter
 
-	A high-performance decay meter system designed for large-scale gameplay systems.
+	A high-performance decay meter system designed for large-scale visual systems.
 	This module allows you to create many independent meters whose values increase
 	and then decay over time after a configurable delay.
 
@@ -17,15 +17,12 @@
 
 	Meters that are waiting for their delay to expire also incur zero per-frame cost.
 
-	This makes the module suitable for extremely large systems such as:
+	This makes the module suitable for visual systems such as:
 	- Camera trauma meters
-	- AI alertness systems
-	- Sanity / fear mechanics
-	- Combat stress tracking
-	- Cooldown decay mechanics
+	- Decaying UI meters
 
 	Author: sol (3693744006)
-	Version: 14-03-26 (1)
+	Version: 15-03-26 (1)
 ]]
 
 local RunService = game:GetService("RunService")
@@ -233,7 +230,7 @@ local function ensureLoop()
 	if running then return end
 
 	running = true
-	connection = RunService.Heartbeat:Connect(update)
+	connection = RunService.RenderStepped:Connect(update)
 end
 
 --[[
